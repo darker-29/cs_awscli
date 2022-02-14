@@ -11,9 +11,9 @@ https://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html
 ```shell
 aws cloudformation deploy \
 --stack-name スタック名 \
---template-body file:/// \
---parameters ParameterKey=Key,ParameterValue=value \
-ParameterKey=Key,ParameterValue=value
+--template-file ファイル名 \
+--parameter-overrides Key=Value \
+Key=Value
 ```
 
 <br>
@@ -54,7 +54,7 @@ aws cloudformation describe-stack \
 ```shell
 aws cloudformation create-change-set \
 --stack-name スタック名 \
---template-body file:/// \
+--template-file ファイル名 \
 --parameters ParameterKey=Key,ParameterValue=value \
 ParameterKey=Key,ParameterValue=value \
 --change-set-name 変更セット名
